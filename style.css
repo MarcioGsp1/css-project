@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+}
+
+/*Estava com problema para deixar a imagem de fundo cobrindo toda a página, e essa foi a solução*/
+html { 
+    min-height: 100%;
+}
+
+body {
+    background-image: linear-gradient(black , #161b5c, #363ea3);
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*====================================*/
+
+ul {
+    display: flex;
+    justify-content: space-around; 
+    background: #363ea3;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a, .drop-btn {
+    display: inline-block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+li a:hover {
+   transition: 0.8s;
+}
+
+li a:hover, dropdown:hover .drop-btn {
+    background-color: black;
+}
+
+li {
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #161b5c;
+    width: 150px;
+    display: none;
+}
+
+.dropdown-content a {
+    color: white;
+    display: block;
+    text-align: left;
+    border: 1px solid #363ea3;
+}
+
+.dropdown-content a:hover {
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
